@@ -1,103 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Sol & Mar Travel | Airport Transfers Burgas & Varna | Taxi Pomorie</title>
-    <meta name="description" content="Professional airport transfers from Burgas and Varna to Pomorie, Wave Resort, and Sunny Beach. Reliable taxi services at fixed prices. Book your 5-star ride today.">
-    <meta name="keywords" content="transfer burgas airport, taxi pomorie, varna airport transfer, wave resort transfer, taxi sunny beach, solimar travel">
-    <link rel="canonical" href="https://solimartravel.net/" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TaxiService",
-      "name": "Sol & Mar Travel",
-      "description": "Premium airport transfer and taxi services in Pomorie, Burgas and Varna region.",
-      "url": "https://solimartravel.net",
-      "telephone": "+359876502317",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Pomorie",
-        "addressCountry": "BG"
-      },
-      "areaServed": ["Burgas Airport", "Varna Airport", "Pomorie", "Wave Resort", "Sunny Beach", "Nessebar"],
-      "priceRange": "$$"
-    }
-    </script>
+<title>Sol & Mar Travel | Airport Transfers Burgas & Varna | Taxi Pomorie</title>
+<meta name="description" content="Professional airport transfers from Burgas and Varna to Pomorie, Wave Resort, and Sunny Beach. Reliable taxi services at fixed prices.">
+<meta name="keywords" content="transfer burgas airport, taxi pomorie, varna airport transfer, wave resort transfer, taxi sunny beach">
 
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
-    <style>
-      :root {
-        --sun: #f5a623; --sun-deep: #e8921a; --sun-pale: #fff8ee;
-        --wave: #4ab8d8; --wave-deep: #2896b8; --wave-pale: #eaf7fc;
-        --navy: #0d2b3e; --dark: #1a2e3b; --mid: #3d5a6b;
-        --gray: #7a8f9a; --light: #dde8ed; --white: #ffffff; --bg: #f8fbfd;
-      }
-      * { margin:0; padding:0; box-sizing:border-box; }
-      html { scroll-behavior:smooth; }
-      body { font-family:'Nunito',sans-serif; color:var(--dark); background:var(--bg); line-height:1.6; overflow-x:hidden; }
-      /* ... Копирай всички останали стилове от твоя оригинален файл тук ... */
-    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TaxiService",
+  "name": "Sol & Mar Travel",
+  "telephone": "+359876502317",
+  "url": "https://solimartravel.net",
+  "areaServed": ["Burgas", "Varna", "Pomorie", "Wave Resort"]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --sun: #f5a623; --sun-deep: #e8921a; --sun-pale: #fff8ee;
+    --wave: #4ab8d8; --wave-deep: #2896b8; --wave-pale: #eaf7fc;
+    --navy: #0d2b3e; --dark: #1a2e3b; --mid: #3d5a6b;
+    --gray: #7a8f9a; --light: #dde8ed; --white: #ffffff; --bg: #f8fbfd;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Nunito',sans-serif; color:var(--dark); background:var(--bg); line-height:1.6; overflow-x:hidden; }
+  .container { max-width:1100px; margin:0 auto; padding:0 20px; }
+  
+  header { background:rgba(255,255,255,0.95); backdrop-filter:blur(10px); padding:15px 0; position:sticky; top:0; z-index:1000; box-shadow:0 2px 20px rgba(0,0,0,0.05); }
+  .nav-row { display:flex; justify-content:space-between; align-items:center; }
+  .logo { font-family:'Playfair Display',serif; font-size:28px; font-weight:700; color:var(--navy); }
+  .logo span { color:var(--wave); }
+  
+  .lang-switch { display:flex; gap:5px; background:var(--light); padding:4px; border-radius:30px; }
+  .lang-btn { border:none; background:none; padding:6px 14px; border-radius:25px; cursor:pointer; font-weight:700; font-size:13px; color:var(--mid); transition:all 0.3s; }
+  .lang-btn.active { background:var(--white); color:var(--navy); box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+  
+  .hero { padding:100px 0 80px; text-align:center; background:linear-gradient(135deg, #eaf7fc 0%, #fff8ee 100%); position:relative; }
+  .hero h1 { font-family:'Playfair Display',serif; font-size:52px; color:var(--navy); margin-bottom:20px; line-height:1.2; }
+  .hero p { font-size:20px; color:var(--mid); max-width:700px; margin:0 auto 35px; }
+  
+  .btn { display:inline-block; background:var(--sun); color:var(--white); padding:16px 35px; border-radius:50px; text-decoration:none; font-weight:800; font-size:18px; transition:all 0.3s; box-shadow:0 10px 25px rgba(245,166,35,0.3); }
+  .btn:hover { background:var(--sun-deep); transform:translateY(-2px); box-shadow:0 15px 30px rgba(245,166,35,0.4); }
+  
+  .pricing { padding:80px 0; }
+  .tabs { display:flex; justify-content:center; gap:15px; margin-bottom:40px; }
+  .tab-btn { padding:12px 25px; border:2px solid var(--light); background:var(--white); border-radius:12px; cursor:pointer; font-weight:700; font-size:16px; color:var(--mid); transition:all 0.3s; }
+  .tab-btn.active { border-color:var(--wave); background:var(--wave); color:var(--white); }
+  
+  .price-table-wrap { display:none; background:var(--white); border-radius:24px; overflow:hidden; box-shadow:0 15px 45px rgba(0,0,0,0.07); border:1px solid var(--light); }
+  .price-table-wrap.active { display:block; animation:fadeIn 0.5s; }
+  @keyframes fadeIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:translateY(0);} }
+  
+  table { width:100%; border-collapse:collapse; }
+  th { background:var(--navy); color:var(--white); text-align:left; padding:20px; font-size:15px; text-transform:uppercase; letter-spacing:1px; }
+  td { padding:18px 20px; border-bottom:1px solid #f0f4f7; font-size:16px; }
+  tr:last-child td { border:none; }
+  tr:hover td { background:var(--wave-pale); }
+  .price-tag { font-weight:800; color:var(--wave-deep); background:var(--wave-pale); padding:6px 12px; border-radius:8px; display:inline-block; }
+  
+  footer { background:var(--navy); color:var(--white); padding:60px 0 30px; margin-top:50px; }
+  .footer-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:40px; margin-bottom:40px; }
+  .footer-bottom { text-align:center; padding-top:30px; border-top:1px solid rgba(255,255,255,0.1); font-size:14px; opacity:0.6; }
+</style>
 </head>
 <body>
 
 <header>
-    <div class="container nav-row">
-        <div class="logo">Sol & Mar <span>Travel</span></div>
-        <div class="lang-switch">
-            <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
-            <button class="lang-btn" data-lang="bg" onclick="setLang('bg')">BG</button>
-        </div>
+  <div class="container nav-row">
+    <div class="logo">Sol & Mar <span>Travel</span></div>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" data-lang="bg" onclick="setLang('bg')">BG</button>
     </div>
+  </div>
 </header>
 
 <section class="hero">
-    <div class="container">
-        <h1 class="lang-en">Premium Airport Transfers & Taxi Services</h1>
-        <h1 class="lang-bg" style="display:none">Премиум Летищни Трансфери и Такси Услуги</h1>
-        
-        <p class="lang-en">Reliable transport from Burgas and Varna to Pomorie, Wave Resort and all Black Sea resorts.</p>
-        <p class="lang-bg" style="display:none">Надежден транспорт от летище Бургас и Варна до Поморие, Уейв Ризорт и всички черноморски курорти.</p>
-        
-        <a href="https://wa.me/359876502317" class="btn lang-en">Book via WhatsApp</a>
-        <a href="https://wa.me/359876502317" class="btn lang-bg" style="display:none">Резервирай през WhatsApp</a>
-    </div>
+  <div class="container">
+    <h1 class="lang-en">Airport Transfers & Taxi Services</h1>
+    <h1 class="lang-bg" style="display:none">Летищни Трансфери и Такси Услуги</h1>
+    <p class="lang-en">Premium door-to-door service from Burgas and Varna Airports to Pomorie and all Black Sea resorts.</p>
+    <p class="lang-bg" style="display:none">Премиум обслужване от врата до врата от летище Бургас и Варна до Поморие и всички черноморски курорти.</p>
+    <a href="https://wa.me/359876502317" class="btn lang-en">Book Now via WhatsApp</a>
+    <a href="https://wa.me/359876502317" class="btn lang-bg" style="display:none">Резервирай през WhatsApp</a>
+  </div>
 </section>
 
-<section id="pricing" class="pricing">
-    <div class="container">
-        <h2 class="lang-en">Fixed Transfer Prices</h2>
-        <h2 class="lang-bg" style="display:none">Фиксирани Цени за Трансфер</h2>
-        
-        <div class="tabs">
-            <button id="tab-burgas" class="tab-btn active" onclick="showTab('burgas')">Burgas Airport (BOJ)</button>
-            <button id="tab-varna" class="tab-btn" onclick="showTab('varna')">Varna Airport (VAR)</button>
-        </div>
-
-        <div id="table-burgas" class="price-table-wrap active">
-            </div>
+<section class="pricing">
+  <div class="container">
+    <div class="tabs">
+      <button id="tab-burgas" class="tab-btn active" onclick="showTab('burgas')">Burgas Airport (BOJ)</button>
+      <button id="tab-varna" class="tab-btn" onclick="showTab('varna')">Varna Airport (VAR)</button>
     </div>
+
+    <div id="table-burgas" class="price-table-wrap active">
+      <table>
+        <thead>
+          <tr>
+            <th class="lang-en">Destination</th><th class="lang-bg" style="display:none">Дестинация</th>
+            <th class="lang-en">Distance</th><th class="lang-bg" style="display:none">Разстояние</th>
+            <th class="lang-en">Price</th><th class="lang-bg" style="display:none">Цена</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Pomorie / Wave Resort</td><td>15-20 km</td><td><span class="price-tag">25 €</span></td></tr>
+          <tr><td>Sarafovo</td><td>5 km</td><td><span class="price-tag">15 €</span></td></tr>
+          <tr><td>Burgas City</td><td>15 km</td><td><span class="price-tag">20 €</span></td></tr>
+          <tr><td>Sunny Beach / Nessebar</td><td>30 km</td><td><span class="price-tag">35 €</span></td></tr>
+          <tr><td>Sozopol</td><td>45 km</td><td><span class="price-tag">45 €</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="table-varna" class="price-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th class="lang-en">Destination</th><th class="lang-bg" style="display:none">Дестинация</th>
+            <th class="lang-en">Distance</th><th class="lang-bg" style="display:none">Разстояние</th>
+            <th class="lang-en">Price</th><th class="lang-bg" style="display:none">Цена</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Pomorie / Wave Resort</td><td>120 km</td><td><span class="price-tag">80 €</span></td></tr>
+          <tr><td>Varna City</td><td>10 km</td><td><span class="price-tag">20 €</span></td></tr>
+          <tr><td>Golden Sands</td><td>25 km</td><td><span class="price-tag">30 €</span></td></tr>
+          <tr><td>Sunny Beach</td><td>100 km</td><td><span class="price-tag">70 €</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </section>
 
 <footer>
-    <div class="container">
-        <div class="footer-grid">
-            <div>
-                <h3>Sol & Mar Travel</h3>
-                <p class="lang-en">5-star service for your vacation. Professionalism and comfort.</p>
-                <p class="lang-bg" style="display:none">5-звездно обслужване за Вашата почивка. Професионализъм и комфорт.</p>
-            </div>
-            <div>
-                <h3 class="lang-en">Contact</h3>
-                <h3 class="lang-bg" style="display:none">Контакти</h3>
-                <p>📞 +359 876 502 317</p>
-                <p>📧 solimar.office@gmail.com</p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Sol & Mar Travel</h3>
+        <p>Your 5-star transfer partner on the Bulgarian Black Sea coast.</p>
+      </div>
+      <div>
+        <h3>Contacts</h3>
+        <p>📞 +359 876 502 317</p>
+        <p>📧 solimar.office@gmail.com</p>
+      </div>
     </div>
+    <div class="footer-bottom">© 2026 Sol & Mar Travel. All rights reserved.</div>
+  </div>
 </footer>
 
 <script>
