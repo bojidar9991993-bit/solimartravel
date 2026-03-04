@@ -15,7 +15,7 @@
   "name": "Sol & Mar Travel",
   "telephone": "+359876502317",
   "url": "https://solimartravel.net",
-  "areaServed": ["Burgas", "Varna", "Pomorie", "Wave Resort"]
+  "areaServed": ["Burgas", "Varna", "Pomorie", "Wave Resort", "Sunny Beach"]
 }
 </script>
 
@@ -35,46 +35,70 @@
   
   header { background:rgba(255,255,255,0.95); backdrop-filter:blur(10px); padding:15px 0; position:sticky; top:0; z-index:1000; box-shadow:0 2px 20px rgba(0,0,0,0.05); }
   .nav-row { display:flex; justify-content:space-between; align-items:center; }
-  .logo { font-family:'Playfair Display',serif; font-size:28px; font-weight:700; color:var(--navy); }
+  .logo { font-family:'Playfair Display',serif; font-size:28px; font-weight:700; color:var(--navy); text-decoration:none; }
   .logo span { color:var(--wave); }
   
   .lang-switch { display:flex; gap:5px; background:var(--light); padding:4px; border-radius:30px; }
   .lang-btn { border:none; background:none; padding:6px 14px; border-radius:25px; cursor:pointer; font-weight:700; font-size:13px; color:var(--mid); transition:all 0.3s; }
   .lang-btn.active { background:var(--white); color:var(--navy); box-shadow:0 2px 8px rgba(0,0,0,0.1); }
   
-  .hero { padding:100px 0 80px; text-align:center; background:linear-gradient(135deg, #eaf7fc 0%, #fff8ee 100%); position:relative; }
-  .hero h1 { font-family:'Playfair Display',serif; font-size:52px; color:var(--navy); margin-bottom:20px; line-height:1.2; }
+  .hero { padding:100px 0 80px; text-align:center; background:linear-gradient(135deg, #eaf7fc 0%, #fff8ee 100%); position:relative; overflow:hidden; }
+  .hero::before { content:''; position:absolute; top:-10%; right:-5%; width:400px; height:400px; background:radial-gradient(circle, var(--sun-pale) 0%, transparent 70%); z-index:0; }
+  .hero .container { position:relative; z-index:1; }
+  .hero h1 { font-family:'Playfair Display',serif; font-size:52px; color:var(--navy); margin-bottom:20px; line-height:1.2; font-weight:700; }
   .hero p { font-size:20px; color:var(--mid); max-width:700px; margin:0 auto 35px; }
   
-  .btn { display:inline-block; background:var(--sun); color:var(--white); padding:16px 35px; border-radius:50px; text-decoration:none; font-weight:800; font-size:18px; transition:all 0.3s; box-shadow:0 10px 25px rgba(245,166,35,0.3); }
+  .btn { display:inline-block; background:var(--sun); color:var(--white); padding:16px 35px; border-radius:50px; text-decoration:none; font-weight:800; font-size:18px; transition:all 0.3s; box-shadow:0 10px 25px rgba(245,166,35,0.3); border:none; cursor:pointer; }
   .btn:hover { background:var(--sun-deep); transform:translateY(-2px); box-shadow:0 15px 30px rgba(245,166,35,0.4); }
   
   .pricing { padding:80px 0; }
+  .section-title { text-align:center; margin-bottom:40px; }
+  .section-title h2 { font-family:'Playfair Display',serif; font-size:36px; color:var(--navy); margin-bottom:10px; }
+  .section-title p { color:var(--gray); }
+  
   .tabs { display:flex; justify-content:center; gap:15px; margin-bottom:40px; }
   .tab-btn { padding:12px 25px; border:2px solid var(--light); background:var(--white); border-radius:12px; cursor:pointer; font-weight:700; font-size:16px; color:var(--mid); transition:all 0.3s; }
+  .tab-btn:hover { border-color:var(--wave); color:var(--wave); }
   .tab-btn.active { border-color:var(--wave); background:var(--wave); color:var(--white); }
   
   .price-table-wrap { display:none; background:var(--white); border-radius:24px; overflow:hidden; box-shadow:0 15px 45px rgba(0,0,0,0.07); border:1px solid var(--light); }
   .price-table-wrap.active { display:block; animation:fadeIn 0.5s; }
-  @keyframes fadeIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:translateY(0);} }
   
   table { width:100%; border-collapse:collapse; }
-  th { background:var(--navy); color:var(--white); text-align:left; padding:20px; font-size:15px; text-transform:uppercase; letter-spacing:1px; }
-  td { padding:18px 20px; border-bottom:1px solid #f0f4f7; font-size:16px; }
+  th { background:var(--navy); color:var(--white); text-align:left; padding:20px; font-size:14px; text-transform:uppercase; letter-spacing:1px; }
+  td { padding:18px 20px; border-bottom:1px solid #f0f4f7; font-size:16px; color:var(--dark); }
   tr:last-child td { border:none; }
   tr:hover td { background:var(--wave-pale); }
   .price-tag { font-weight:800; color:var(--wave-deep); background:var(--wave-pale); padding:6px 12px; border-radius:8px; display:inline-block; }
   
-  footer { background:var(--navy); color:var(--white); padding:60px 0 30px; margin-top:50px; }
-  .footer-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:40px; margin-bottom:40px; }
+  .features { padding:60px 0; background:var(--white); }
+  .features-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:30px; }
+  .feature-card { padding:30px; border-radius:20px; background:var(--bg); border:1px solid var(--light); transition:all 0.3s; }
+  .feature-card:hover { transform:translateY(-5px); box-shadow:0 10px 30px rgba(0,0,0,0.05); }
+  .feature-icon { font-size:32px; margin-bottom:15px; display:block; }
+  .feature-card h3 { font-family:'Playfair Display',serif; margin-bottom:10px; color:var(--navy); }
+  
+  footer { background:var(--navy); color:var(--white); padding:80px 0 40px; }
+  .footer-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:50px; }
+  .footer-logo { font-family:'Playfair Display',serif; font-size:32px; font-weight:700; margin-bottom:20px; display:block; color:var(--white); text-decoration:none; }
+  .footer-logo span { color:var(--wave); }
+  .footer-links h4 { margin-bottom:20px; color:var(--sun); font-size:18px; }
+  .footer-links ul { list-style:none; }
+  .footer-links li { margin-bottom:12px; opacity:0.8; }
   .footer-bottom { text-align:center; padding-top:30px; border-top:1px solid rgba(255,255,255,0.1); font-size:14px; opacity:0.6; }
+
+  @keyframes fadeIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:translateY(0);} }
+  @media (max-width:768px) {
+    .hero h1 { font-size:36px; }
+    .tabs { flex-direction:column; align-items:stretch; }
+  }
 </style>
 </head>
 <body>
 
 <header>
   <div class="container nav-row">
-    <div class="logo">Sol & Mar <span>Travel</span></div>
+    <a href="#" class="logo">Sol & Mar <span>Travel</span></a>
     <div class="lang-switch">
       <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
       <button class="lang-btn" data-lang="bg" onclick="setLang('bg')">BG</button>
@@ -84,92 +108,27 @@
 
 <section class="hero">
   <div class="container">
-    <h1 class="lang-en">Airport Transfers & Taxi Services</h1>
-    <h1 class="lang-bg" style="display:none">Летищни Трансфери и Такси Услуги</h1>
-    <p class="lang-en">Premium door-to-door service from Burgas and Varna Airports to Pomorie and all Black Sea resorts.</p>
+    <h1 class="lang-en">Boutique Airport Transfers</h1>
+    <h1 class="lang-bg" style="display:none">Бутикови летищни трансфери</h1>
+    <p class="lang-en">Experience premium door-to-door service from Burgas and Varna Airports to Pomorie and all Black Sea resorts.</p>
     <p class="lang-bg" style="display:none">Премиум обслужване от врата до врата от летище Бургас и Варна до Поморие и всички черноморски курорти.</p>
-    <a href="https://wa.me/359876502317" class="btn lang-en">Book Now via WhatsApp</a>
+    <a href="https://wa.me/359876502317" class="btn lang-en">Book via WhatsApp</a>
     <a href="https://wa.me/359876502317" class="btn lang-bg" style="display:none">Резервирай през WhatsApp</a>
   </div>
 </section>
 
-<section class="pricing">
-  <div class="container">
-    <div class="tabs">
-      <button id="tab-burgas" class="tab-btn active" onclick="showTab('burgas')">Burgas Airport (BOJ)</button>
-      <button id="tab-varna" class="tab-btn" onclick="showTab('varna')">Varna Airport (VAR)</button>
+<section class="features">
+  <div class="container features-grid">
+    <div class="feature-card">
+      <span class="feature-icon">✨</span>
+      <h3 class="lang-en">Fixed Prices</h3><h3 class="lang-bg" style="display:none">Фиксирани цени</h3>
+      <p class="lang-en">No hidden fees, no surprises. What you see is what you pay.</p>
+      <p class="lang-bg" style="display:none">Без скрити такси. Плащате това, което виждате.</p>
     </div>
-
-    <div id="table-burgas" class="price-table-wrap active">
-      <table>
-        <thead>
-          <tr>
-            <th class="lang-en">Destination</th><th class="lang-bg" style="display:none">Дестинация</th>
-            <th class="lang-en">Distance</th><th class="lang-bg" style="display:none">Разстояние</th>
-            <th class="lang-en">Price</th><th class="lang-bg" style="display:none">Цена</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Pomorie / Wave Resort</td><td>15-20 km</td><td><span class="price-tag">25 €</span></td></tr>
-          <tr><td>Sarafovo</td><td>5 km</td><td><span class="price-tag">15 €</span></td></tr>
-          <tr><td>Burgas City</td><td>15 km</td><td><span class="price-tag">20 €</span></td></tr>
-          <tr><td>Sunny Beach / Nessebar</td><td>30 km</td><td><span class="price-tag">35 €</span></td></tr>
-          <tr><td>Sozopol</td><td>45 km</td><td><span class="price-tag">45 €</span></td></tr>
-        </tbody>
-      </table>
+    <div class="feature-card">
+      <span class="feature-icon">🕒</span>
+      <h3 class="lang-en">24/7 Service</h3><h3 class="lang-bg" style="display:none">24/7 Обслужване</h3>
+      <p class="lang-en">Available day and night for your flights at Burgas & Varna.</p>
+      <p class="lang-bg" style="display:none">На разположение денонощно за вашите полети.</p>
     </div>
-
-    <div id="table-varna" class="price-table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th class="lang-en">Destination</th><th class="lang-bg" style="display:none">Дестинация</th>
-            <th class="lang-en">Distance</th><th class="lang-bg" style="display:none">Разстояние</th>
-            <th class="lang-en">Price</th><th class="lang-bg" style="display:none">Цена</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Pomorie / Wave Resort</td><td>120 km</td><td><span class="price-tag">80 €</span></td></tr>
-          <tr><td>Varna City</td><td>10 km</td><td><span class="price-tag">20 €</span></td></tr>
-          <tr><td>Golden Sands</td><td>25 km</td><td><span class="price-tag">30 €</span></td></tr>
-          <tr><td>Sunny Beach</td><td>100 km</td><td><span class="price-tag">70 €</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h3>Sol & Mar Travel</h3>
-        <p>Your 5-star transfer partner on the Bulgarian Black Sea coast.</p>
-      </div>
-      <div>
-        <h3>Contacts</h3>
-        <p>📞 +359 876 502 317</p>
-        <p>📧 solimar.office@gmail.com</p>
-      </div>
-    </div>
-    <div class="footer-bottom">© 2026 Sol & Mar Travel. All rights reserved.</div>
-  </div>
-</footer>
-
-<script>
-function setLang(lang) {
-  document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
-  document.querySelectorAll('.lang-bg').forEach(el => el.style.display = lang === 'bg' ? '' : 'none');
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-  document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add('active');
-}
-function showTab(airport) {
-  document.querySelectorAll('.price-table-wrap').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('table-' + airport).classList.add('active');
-  document.getElementById('tab-' + airport).classList.add('active');
-}
-</script>
-
-</body>
-</html>
+    <div class="feature-card
